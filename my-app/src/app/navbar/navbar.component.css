@@ -1,0 +1,22 @@
+.navbar{
+    border-bottom: 1px solid #b9b6b6;
+   color: white !important;
+}
+.navbar.bg-body-tertiary {
+    background-color: #555 !important ;/* Light blue color */
+    justify-content: space-evenly;
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Change text color to white */
+}
+.nav-link:hover{
+    background-color: #b9b6b6;
+    border-radius: 9px;
+    font-size: 15px;
+}
+.navbar i:hover{
+    background-color: #b9b6b6;
+    font-size: 22px;
+    border-radius: 9px;
+}
