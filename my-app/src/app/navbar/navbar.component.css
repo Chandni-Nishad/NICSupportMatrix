@@ -3,8 +3,9 @@
    color: white !important;
 }
 .navbar.bg-body-tertiary {
-    background-color: #555 !important ;/* Light blue color */
+    background-color: #323030 !important ;/* Light blue color */
     justify-content: space-evenly;
+   
 }
 
 .navbar-nav .nav-link {
