@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AdminFormComponent } from '../admin-form/admin-form.component';
 
+
 @Component({
   selector: 'app-admin-login',
   standalone: true,

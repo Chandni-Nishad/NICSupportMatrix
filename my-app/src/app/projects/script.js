@@ -1,15 +1,20 @@
-const carousel = document.querySelector(".carousel");
+var carouselWidth = $('.carousel-inner')[0].scrollWidth;
+var cardWidth = $('.carousel-item').width();
 
-let isDragging = false;
+var scrollPosition = 0;
 
-const dragStart= () => {
-    isDragging = true;
-}
+$('.carousel-control-next').on('click', function(){
+    if (scrollPosition < (carouselWidth - (cardWidth * 5))) {
+        console.log('next');
+        scrollPosition += cardWidth;
+        $('.carousel-inner').animate({scrollLeft: scrollPosition}, 600);
+    }
+});
 
-const dragging = (e) => {
-    if(!isDragging) return;
-    carousel.scrollLeft =e.pageX;
-}
-carousel.addEventListener("mousedown",dragStart);
-
-carousel.addEventListener("mousemove",dragging);
+$('.carousel-control-prev').on('click', function(){
+    if (scrollPosition > 0 && (carouselWidth - (cardWidth * 5)) > 0) {
+        console.log('prev');
+        scrollPosition -= cardWidth;
+        $('.carousel-inner').animate({scrollLeft: scrollPosition}, 600);
+    }
+});

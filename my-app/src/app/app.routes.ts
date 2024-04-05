@@ -23,7 +23,7 @@ export const routes: Routes = [
     {path : "services", title : 'Services', component : ServicespageComponent},
     {path : 'user-form', title : 'User Form', component : UserFormComponent},
     {path : 'hod-form', title : 'HOD Form', component : HODFormComponent},
-    {path : 'admin-form', title : 'Admin Form', component : AdminFormComponent}
+    {path : 'admin-form', title : 'Admin Form', component : AdminFormComponent},
 
 
 ];
