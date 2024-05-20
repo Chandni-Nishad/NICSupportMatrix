@@ -10,9 +10,11 @@ import { ServicespageComponent } from './servicespage/servicespage.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { HODFormComponent } from './hodform/hodform.component';
 import { AdminFormComponent } from './admin-form/admin-form.component';
+import { AboutthewebsiteComponent } from './aboutthewebsite/aboutthewebsite.component';
 
 
 export const routes: Routes = [
+    {path : '' , title : 'Home', redirectTo : 'home', pathMatch : 'full'},
     {path : 'home', title : 'Home', component :HomeComponent},
     {path : 'signup-form', title : 'Sign Up', component : SignupformComponent},
     {path : 'user-login', title : 'User Login', component : UserLoginComponent},
@@ -24,6 +26,7 @@ export const routes: Routes = [
     {path : 'user-form', title : 'User Form', component : UserFormComponent},
     {path : 'hod-form', title : 'HOD Form', component : HODFormComponent},
     {path : 'admin-form', title : 'Admin Form', component : AdminFormComponent},
+    {path : 'aboutthewebsite', title : 'about-the-website', component : AboutthewebsiteComponent}
 
 
 ];

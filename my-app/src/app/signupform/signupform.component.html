@@ -1,35 +1,37 @@
 <nav class="container" style="overflow: auto;">
-    <div class="container" style="height: 600px; width: 400px; background-color: gray; margin-top: 20px; border-radius: 9px;">
+    <div class="container" style="height: 600px; width: 400px; background-color: rgb(26, 79, 117); background: linear-gradient(90deg,hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100% ); margin-top: 20px; border-radius: 9px;">
         <h1 style="text-align: center; margin-bottom: 10px; margin-top: 10px; color: white;"> SignUp </h1>
+        <h6 style="color: white; text-align: center;"> Please fill the details </h6>
         <div class="row">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Fisrt Name </label>
-                <input type="text" class="form-control" placeholder=" Enter Your First name" aria-label="First name" style="width: 300px;" required>
+                <input type="text" id="firstname" class="form-control" placeholder=" Enter Your First name" aria-label="First name" style="width: 300px;" required>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label" style="margin-top: 10px;  color: white; font-weight: 500; font-size: 1.2rem">Last Name </label>
-                <input type="text" class="form-control" placeholder=" Enter Your Last name" aria-label="Last name" style="width: 300px;">
+                <input type="text" id="lastname" class="form-control" placeholder=" Enter Your Last name" aria-label="Last name" style="width: 300px;">
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label" style="margin-top: 10px;  color: white; font-weight: 500; font-size: 1.2rem;">Email</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
+                <input type="text" class="form-control" id="emailid"
                     placeholder="Enter Your Email" style="width: 300px;">
+                    <div id="emailHelp" class="form-text" style="color: rgb(154, 145, 127);">We'll never share your email with anyone else.</div>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label" style="margin-top: 10px;  color: white; font-weight: 500; font-size: 1.2rem">Mobile Number </label>
-                <input type="mobile number" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Mobile Number" style="width: 300px;">
+                <input type="mobile number" class="form-control" id="mobilenumber" placeholder="Enter Your Mobile Number" style="width: 300px;">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label" style="margin-top: 10px;  color: white; font-weight: 500; font-size: 1.2rem">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Create Password" style="width: 300px;">
+                <input type="password" class="form-control" id="password" placeholder="Create Password" style="width: 300px;">
             </div>
         </div>
         <div class="col-auto">
@@ -37,3 +39,43 @@
         </div>
     </div>
 </nav>
+
+<!--div class="container" style="overflow-x: auto;">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1> SignUp</h1>
+            <h6 style="color: white;"> Please fill the details </h6>
+          </div>
+          <form>
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="exampleInputFullName" aria-describedby="emailHelp">
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+                  <input type="number" class="form-control" id="exampleInputMobileNumber">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email Address</label>
+                    <input type="text" class="form-control" id="exampleInputEmail">
+                    <div id="emailHelp" class="form-text" style="color: rgb(154, 145, 127);">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Accept The Term and Conditions</label>
+                </div>
+                <a routerLink="/user-form"><button type="submit" class="btn btn-primary " style="margin-top: 10px; background-color: rgb(26, 17, 94);">Login</button></a>
+              </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div-->
