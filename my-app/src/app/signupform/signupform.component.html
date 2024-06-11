@@ -1,12 +1,15 @@
-<nav class="container" style="overflow: auto;">
+<!--nav class="container" style="overflow: auto;">
     <div class="container" style="height: 600px; width: 400px; background-color: rgb(26, 79, 117); background: linear-gradient(90deg,hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100% ); margin-top: 20px; border-radius: 9px;">
         <h1 style="text-align: center; margin-bottom: 10px; margin-top: 10px; color: white;"> SignUp </h1>
         <h6 style="color: white; text-align: center;"> Please fill the details </h6>
         <div class="row">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Fisrt Name </label>
-                <input type="text" id="firstname" class="form-control" placeholder=" Enter Your First name" aria-label="First name" style="width: 300px;" required>
-            </div>
+                <input type="text"  id="firstname" class="form-control" placeholder=" Enter Your First name" aria-label="First name" style="width: 300px;" ngmodle required>
+                <div class="invalid-feedback" *ngIf="signupForm.submitted && !firstname.valid" class="text-danger">
+                  Please Enter Your First Name
+                </div>
+              </div>
         </div>
         <div class="row">
             <div class="col">
@@ -20,25 +23,38 @@
                 <input type="text" class="form-control" id="emailid"
                     placeholder="Enter Your Email" style="width: 300px;">
                     <div id="emailHelp" class="form-text" style="color: rgb(154, 145, 127);">We'll never share your email with anyone else.</div>
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                  </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label" style="margin-top: 10px;  color: white; font-weight: 500; font-size: 1.2rem">Mobile Number </label>
                 <input type="mobile number" class="form-control" id="mobilenumber" placeholder="Enter Your Mobile Number" style="width: 300px;">
+                <div class="invalid-feedback">
+                  Please enter a valid 10-digit mobile number.
+              </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label" style="margin-top: 10px;  color: white; font-weight: 500; font-size: 1.2rem">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Create Password" style="width: 300px;">
+                <input type="password" class="form-control" id="password" minlength="8"  placeholder="Create Password" style="width: 300px;">
+                <div class="invalid-feedback">
+                  Please enter a password with at least 8 characters.
+              </div>
             </div>
         </div>
         <div class="col-auto">
             <button type="submit" class="btn btn-primary" style="margin-top: 10px;" >Sign Up</button>
         </div>
     </div>
-</nav>
+</nav-->
+
+
+
+
 
 <!--div class="container" style="overflow-x: auto;">
     <div class="row">
@@ -79,3 +95,78 @@
       </div>
     </div>
   </div-->
+
+
+  <!--form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email">
+      <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+        <small *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</small>
+        <small *ngIf="signupForm.get('email')?.errors?.['maxLength']">Email is too long.</small>
+        <small *ngIf="signupForm.get('email')?.errors?.['invalidEmail']">Invalid email address.</small>
+      </div>
+    </div>
+    <button type="submit">Sign Up</button>
+  </form--> 
+
+
+
+
+
+ 
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+
+    <div class="container" style="overflow: auto; background-image: url(https://static.vecteezy.com/system/resources/thumbnails/003/689/230/small/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg);">
+        <div class="container" style="height: 600px; width: 400px; background-color: rgb(26, 79, 117); background: linear-gradient(90deg,hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100% ); margin-top: 20px; border-radius: 9px;">
+            <h1 style="text-align: center; margin-bottom: 10px; margin-top: 10px; color: white;"> SignUp </h1>
+            <h6 style="color: white; text-align: center;"> Please fill the details </h6>
+            <form id="signupForm">
+                <div class="row">
+                    <div class="col">
+                        <label for="firstname" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">First Name</label>
+                        <input type="text" id="firstname" class="form-control" placeholder="Enter Your First name" aria-label="First name" style="width: 300px;" required>
+                        <div id="firstnameError" class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="lastname" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Last Name</label>
+                        <input type="text" id="lastname" class="form-control" placeholder="Enter Your Last name" aria-label="Last name" style="width: 300px;" required>
+                        <div id="lastnameError" class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="emailid" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Email</label>
+                        <input type="email" class="form-control" id="emailid" placeholder="Enter Your Email" style="width: 300px;" required>
+                        <div id="emailError" class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="mobilenumber" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobilenumber" placeholder="Enter Your Mobile Number" style="width: 300px;" required>
+                        <div id="mobileError" class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="password" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Create Password" style="width: 300px;" required>
+                        <div id="passwordError" class="error"></div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+   

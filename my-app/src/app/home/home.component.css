@@ -1,5 +1,17 @@
-
-
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+@media (max-width: 368px) {
+    .carousel-item img {
+        height: 100px;
+    }
+}
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 100px;
+    }
+}
 
 
     

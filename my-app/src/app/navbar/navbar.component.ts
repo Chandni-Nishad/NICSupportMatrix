@@ -12,7 +12,7 @@ import { ServicespageComponent } from '../servicespage/servicespage.component';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [SignupformComponent,HODLonginComponent, UserLoginComponent, AdminLoginComponent, RouterLinkActive, RouterLink, HomeComponent, ContactpageComponent,AboutuspageComponent,ServicespageComponent],
+  imports: [SignupformComponent, HODLonginComponent, UserLoginComponent, AdminLoginComponent, RouterLinkActive, RouterLink, HomeComponent, ContactpageComponent,AboutuspageComponent,ServicespageComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
