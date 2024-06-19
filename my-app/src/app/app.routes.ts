@@ -26,7 +26,7 @@ export const routes: Routes = [
     {path : 'user-form', title : 'User Form', component : UserFormComponent},
     {path : 'hod-form', title : 'HOD Form', component : HODFormComponent},
     {path : 'admin-form', title : 'Admin Form', component : AdminFormComponent},
-    {path : 'aboutthewebsite', title : 'about-the-website', component : AboutthewebsiteComponent}
+    {path : 'aboutthewebsite', title : 'about-the-website', component : AboutthewebsiteComponent},
 
 
 ];
