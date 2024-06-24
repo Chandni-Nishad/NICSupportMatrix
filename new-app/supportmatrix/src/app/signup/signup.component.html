@@ -1,46 +1,48 @@
-<div class="container" style="overflow: auto; background-image: url(https://static.vecteezy.com/system/resources/thumbnails/003/689/230/small/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg);">
-    <div class="container" style="height: 600px; width: 400px; background-color: rgb(26, 79, 117); background: linear-gradient(90deg,hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100% ); margin-top: 20px; border-radius: 9px;">
-        <h1 style="text-align: center; margin-bottom: 10px; margin-top: 10px; color: white;"> SignUp </h1>
-        <h6 style="color: white; text-align: center;"> Please fill the details </h6>
-        <form id="signupForm">
+<div class="container" style="overflow: hidden; background-image: url(https://images.pexels.com/photos/1042423/pexels-photo-1042423.jpeg?cs=srgb&dl=pexels-kasperphotography-1042423.jpg&fm=jpg);">
+    <div class="container" style="height: 600px; width: 400px; background-color: rgb(26, 79, 117); background: linear-gradient(90deg,hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100% ); background : transparent;  margin-top: 20px; border-radius: 9px;">
+        <h1 style="text-align: center; margin-bottom: 10px; margin-top: 10px; margin-right: 40px; color: white;"> SignUp </h1>
+        <h6 style="color: white; text-align: center; margin-right: 40px;"> Please fill the details </h6>
+        <form id="signupForm" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col">
-                    <label for="firstname" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">First Name</label>
-                    <input type="text" id="firstname" class="form-control" placeholder="Enter Your First name" aria-label="First name" style="width: 300px;" required>
-                    <div id="firstnameError" class="error"></div>
+                    <label for="First Name" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">First Name</label>
+                    <input type="text" id="firstname" formControlName="firstname"   class="form-control" [ngClass]="{'is-invalid' : 'submitted && signupForm.controls.firstname.errors'}" placeholder="Enter Your First name" aria-label="First name" style="width: 300px; background: transparent; color: white; " required>
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <label for="lastname" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Last Name</label>
-                    <input type="text" id="lastname" class="form-control" placeholder="Enter Your Last name" aria-label="Last name" style="width: 300px;" required>
+                    <label for="Last Name" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Last Name</label>
+                    <input type="text" id="lastname" formControlName="lastname"  class="form-control" [ngClass]="{'is-invalid' : 'submitted && signupForm.controls.lastname.errors'}" placeholder="Enter Your Last name" aria-label="Last name" style="width: 300px; background: transparent; color: white;">
                     <div id="lastnameError" class="error"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <label for="emailid" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Email</label>
-                    <input type="email" class="form-control" id="emailid" placeholder="Enter Your Email" style="width: 300px;" required>
-                    <div id="emailError" class="error"></div>
+                    <input type="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid' : 'submitted && signupForm.controls.email.errors'}" id="emailid" placeholder="Enter Your Email" style="width: 300px; background: transparent; color: white;">
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <label for="mobilenumber" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Mobile Number</label>
-                    <input type="text" class="form-control" id="mobilenumber" placeholder="Enter Your Mobile Number" style="width: 300px;" required>
-                    <div id="mobileError" class="error"></div>
+                    <input type="text"  formControlName="mobilenumber" class="form-control" [ngClass]="{'is-invalid' : 'submitted && signupForm.controls.mobilenumber.errors'}" id="mobilenumber" placeholder="Enter Your Mobile Number" style="width: 300px; background: transparent; color: white;">
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label for="password" class="form-label" style="margin-top: 10px; color: white; font-weight: 500; font-size: 1.2rem;">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Create Password" style="width: 300px;" required>
-                    <div id="passwordError" class="error"></div>
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{'is-invalid' : 'submitted && signupForm.controls.password.errors'}" id="password" placeholder="Create Password" style="width: 300px; background: transparent; color: white;" required>
+                    
                 </div>
             </div>
             <div class="col-auto">
-                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Sign Up</button>
+                <button type="submit" class="btn" style="margin-top: 10px; background-color: rgb(174, 38, 38); color: white;">Sign Up</button>
+                <button type="button" class="btn btn-primary" (click)="onReset()" style="margin-top: 10px; margin-left: 10px;">clear</button>
             </div>
+            <a  routerLink="/user-login" style="color: white;"> <h6 style="margin-top: 10px;"> Already Registered / Signup ? Click to Login </h6></a>
         </form>
     </div>
 </div>

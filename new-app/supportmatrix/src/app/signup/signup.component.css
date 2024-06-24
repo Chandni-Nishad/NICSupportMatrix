@@ -2,3 +2,7 @@
     color: red;
     font-size: 0.9rem;
 }
+.form-control::placeholder{
+    color: rgba(255, 255, 255, 0.586);
+    opacity: 1;
+}

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { UpcomingprojectsComponent } from './upcomingprojects/upcomingprojects.component';
@@ -20,6 +20,7 @@ import { HodloginComponent } from './hodlogin/hodlogin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { SliderComponent } from './slider/slider.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   
@@ -41,11 +42,12 @@ export function HttpLoaderFactory(http: HttpClient) {
    SignupComponent,
    UserloginComponent,
    HodloginComponent,
-   AdminloginComponent
+   AdminloginComponent,
+   SliderComponent
    
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,ReactiveFormsModule,
     AppRoutingModule,RouterOutlet,FormsModule, HttpClientModule,TranslateModule.forRoot({
       loader :{
         provide : TranslateLoader,
