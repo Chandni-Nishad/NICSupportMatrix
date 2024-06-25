@@ -1,0 +1,57 @@
+.container a{
+    text-decoration:  none;
+    
+}
+.container{
+    border-bottom: .70px solid brown;
+}
+.container-fluid{
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
+    
+}
+
+
+.contact{
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: rgb(179, 235, 254);
+    position: relative;
+    overflow: hidden;
+
+}
+.contact::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-left: 5px solid brown;
+    transition: width 0.5s ease
+}
+.contact::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-right: 5px solid brown;
+    transition: width 0.5s ease;
+}
+.contact:hover::before,.contact:hover::after{
+    width: 100%;
+}
+
+.contact:hover::before {
+    transition: width 0.5s ease 0s;
+  }
+
+.contact:hover::after {
+    transition: width 0.5s ease 0.5s;
+  }

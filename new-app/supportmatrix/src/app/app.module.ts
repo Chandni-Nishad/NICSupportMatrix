@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { UpcomingprojectsComponent } from './upcomingprojects/upcomingprojects.component';
@@ -21,6 +21,9 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { SliderComponent } from './slider/slider.component';
+import { AdminformComponent } from './adminform/adminform.component';
+import { HodformComponent } from './hodform/hodform.component';
+import { UserformComponent } from './userform/userform.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   
@@ -43,7 +46,10 @@ export function HttpLoaderFactory(http: HttpClient) {
    UserloginComponent,
    HodloginComponent,
    AdminloginComponent,
-   SliderComponent
+   SliderComponent,
+   AdminformComponent,
+   HodformComponent,
+   UserformComponent
    
   ],
   imports: [

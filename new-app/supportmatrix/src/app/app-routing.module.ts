@@ -9,6 +9,9 @@ import { SignupComponent } from './signup/signup.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { HodloginComponent } from './hodlogin/hodlogin.component';
+import { AdminformComponent } from './adminform/adminform.component';
+import { HodformComponent } from './hodform/hodform.component';
+import { UserformComponent } from './userform/userform.component';
 
 
 const routes: Routes = [
@@ -21,6 +24,9 @@ const routes: Routes = [
     {path : 'user-login', title : 'UserLogin', component : UserloginComponent},
     {path : 'admin-login', title : 'AdminLogin', component : AdminloginComponent},
     {path : 'hod-login', title : 'HodLogin', component : HodloginComponent},
+    {path : 'admin-form', title : 'AdminForm', component : AdminformComponent},
+    {path : 'hod-form', title : 'HodForm', component : HodformComponent},
+    {path : 'user-form', title : 'UserForm', component : UserformComponent},
     {path : '**', title : 'Home', redirectTo : '/home'}
     
     
