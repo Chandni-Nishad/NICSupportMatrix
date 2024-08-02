@@ -6,3 +6,14 @@
     color: rgba(255, 255, 255, 0.586);
     opacity: 1;
 }
+
+.is-invalid {
+    border-color: red;
+  }
+  
+  .invalid-feedback {
+    color: red;
+    display: block;
+  }
+
+/*background-color: rgb(26, 79, 117); background: linear-gradient(90deg,hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100% );*/

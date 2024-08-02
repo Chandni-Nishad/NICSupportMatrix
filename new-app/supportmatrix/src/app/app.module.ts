@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,18 +11,23 @@ import { UpcomingprojectsComponent } from './upcomingprojects/upcomingprojects.c
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
 import { ServicesComponent } from './services/services.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { HodloginComponent } from './hodlogin/hodlogin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientJsonpModule, HttpClientModule   } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { SliderComponent } from './slider/slider.component';
 import { AdminformComponent } from './adminform/adminform.component';
 import { HodformComponent } from './hodform/hodform.component';
 import { UserformComponent } from './userform/userform.component';
+import { MandateComponent } from './mandate/mandate.component';
+import { WhoswhoComponent } from './whoswho/whoswho.component';
+import { DirectoryComponent } from './directory/directory.component';
+import { MyloginComponent } from './mylogin/mylogin.component';
+import { ProjectinfoComponent } from './projectinfo/projectinfo.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   
@@ -40,7 +44,6 @@ export function HttpLoaderFactory(http: HttpClient) {
    ProjectsComponent,
    FooterComponent,
    ContactusComponent,
-   AboutusComponent,
    ServicesComponent,
    SignupComponent,
    UserloginComponent,
@@ -49,12 +52,18 @@ export function HttpLoaderFactory(http: HttpClient) {
    SliderComponent,
    AdminformComponent,
    HodformComponent,
-   UserformComponent
+   UserformComponent,
+   MandateComponent,
+   WhoswhoComponent,
+   DirectoryComponent,
+   MyloginComponent,
+   ProjectinfoComponent,
+   ForgetpasswordComponent
    
   ],
   imports: [
-    BrowserModule,ReactiveFormsModule,
-    AppRoutingModule,RouterOutlet,FormsModule, HttpClientModule,TranslateModule.forRoot({
+    BrowserModule,ReactiveFormsModule,HttpClientModule,
+    AppRoutingModule,RouterOutlet,FormsModule, HttpClientJsonpModule,TranslateModule.forRoot({
       loader :{
         provide : TranslateLoader,
         useFactory : HttpLoaderFactory,
@@ -63,7 +72,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [
-    provideClientHydration()
+    
   ],
   bootstrap: [AppComponent]
 })

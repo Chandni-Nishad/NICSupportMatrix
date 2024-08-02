@@ -19,8 +19,24 @@
               <li class="nav-item" style="margin-right: 15px;">
                 <a class="nav-link active"  routerLink="/contactus">Contact Us</a>
               </li>
-              <li class="nav-item active" style="margin-right: 15px; ">
+              <!--li class="nav-item active" style="margin-right: 15px; ">
                 <a class="nav-link" routerLink="/aboutus">About Us</a>
+                <!--ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/mandate">Mandate</a></li>
+                  <li><a class="dropdown-item" routerLink="/whoswho">Who's Who</a></li>
+                  <!--li><hr class="dropdown-divider"></li-->
+                  <li><a class="dropdown-item" routerLink="/directory">Directory Search</a></li>
+                </ul>
               </li>
               <li class="nav-item active" style="margin-right: 15px;">
                 <a class="nav-link" routerLink="/services">Services </a>
